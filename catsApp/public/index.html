@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+    <title>MVC With Cats!</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/assets/js/cats.js"></script>
+  </head>
+  <body>
+    <h1>Cats!</h1>
+
+    <h2>Burgers that Have been ordered!</h2>
+
+    <ul id="notSleepyCats"></ul>
+
+    <h2>Burgers that have been Eaten!!</h2>
+
+    <ul id="sleepyCats"></ul>
+
+    <h2>Add a Burger</h2>
+    <form class="create-form">
+      <div class="form-group">
+        <label for="ca">Burger Order:</label>
+        <input type="text" id="ca" name="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="sleepy">Sleepy?</label><br />
+        <input type="radio" name="sleepy" value="1" checked /> Sleepy!<br />
+        <input type="radio" name="sleepy" value="0" /> Awake
+      </div>
+
+      <button type="submit">Add Burger</button>
+    </form>
+  </body>
+</html>
