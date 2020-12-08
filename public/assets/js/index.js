@@ -14,13 +14,13 @@ $(function() {
         "<li>" +
         burgers[i].id + 
         ". "+burgers[i].name +
-        "<button class='change-eaten' data-id='" +
+        "<button class='change-devoured' data-id='" +
         burgers[i].id +
-        "' data-newEaten='" +
-        !burgers[i].sleepy +
+        "' data-newdevour='" +
+        !burgers[i].devoured +
         "'>";
 
-      if (burgers[i].sleepy) {
+      if (burgers[i].devoured) {
         new_elem += "Make a New Burger!!";
       } else {
         new_elem += "HAS Been EATEN!!";
@@ -29,34 +29,34 @@ $(function() {
       new_elem += "</button>";
 
       new_elem +=
-        "<button class='delete-cat' data-id='" +
+        "<button class='delete-burger' data-id='" +
         burgers[i].id +
-        "'>DELETE!</button></li>";
+        "'>Throw in Garbage!</button></li>";
 
-      if (burgers[i].eaten) {
+      if (burgers[i].devoured) {
         burgersOrdered.append(new_elem);
       } else {
-        burgersEaten.append(new_elem);
+        burgersDevoured.append(new_elem);
       }
     }
   });
 
-  $(document).on("click", ".change-eaten", function(event) {
+  $(document).on("click", ".change-devour", function(event) {
     var id = $(this).data("id");
-    var newEaten = $(this).data("newDevoured")===true;
+    var newDevoured = $(this).data("newdevoured")===true;
 
-    var newEatenState = {
-      eaten: newDevoured
+    var newDevouredState = {
+      devour: newDevoured
     };
 
     // Send the PUT request.
     $.ajax("/burgers/" + id, {
       type: "PUT",
-      data: JSON.stringify(newEatenState),
+      data: JSON.stringify(newDevouredState),
       dataType:'json',
       contentType: 'application/json'
     }).then(function() {
-      console.log("changed eaten to", newEaten);
+      console.log("changed eaten to", newDevoured);
       // Reload the page to get the updated list
       location.reload();
     });
@@ -70,7 +70,7 @@ $(function() {
       name: $("#ca")
         .val()
         .trim(),
-      sleepy: $("[name=eaten]:checked")
+      devoured: $("[name=devoured]:checked")
         .val()
         .trim()
     };
