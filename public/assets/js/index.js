@@ -14,7 +14,7 @@ $(function() {
         "<li>" +
         burgers[i].id + 
         ". "+burgers[i].name +
-        "<button class='change-devoured' data-id='" +
+        "<button class='change-devour' data-id='" +
         burgers[i].id +
         "' data-newdevour='" +
         !burgers[i].devoured +
@@ -43,10 +43,10 @@ $(function() {
 
   $(document).on("click", ".change-devour", function(event) {
     var id = $(this).data("id");
-    var newDevoured = $(this).data("newdevoured")===true;
+    var newDevour = $(this).data("newdevour")===true;
 
     var newDevouredState = {
-      devour: newDevoured
+      devoured: newDevour
     };
 
     // Send the PUT request.
