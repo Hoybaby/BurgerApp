@@ -3,22 +3,22 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
-var cat = require("../models/cat.js");
+var cat = require("../models/burger.js");
 
 router.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/cats", function(req, res) {
+router.get("/burgers", function(req, res) {
   cat.all(function(data) {
     res.json({ cats: data });
   });
 });
 
-router.post("/cats", function(req, res) {
+router.post("/burgers", function(req, res) {
   cat.create([
-    "name", "sleepy"
+    "name", "eaten"
   ], [
     req.body.name, req.body.sleepy
   ], function(result) {
