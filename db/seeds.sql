@@ -1,6 +1,7 @@
-INSERT INTO burgers (name) VALUES ('Cheeseburger', false);
-INSERT INTO burgers (name) VALUES ('Bobbi', false);
--- INSERT INTO burgers (name, sleepy) VALUES ('Sylvester', true);
--- INSERT INTO burgers (name, sleepy) VALUES ('Marilyn Manson', true);
--- INSERT INTO burgers (name, sleepy) VALUES ('Joe Biden', true);
--- INSERT INTO burgers (name) VALUES ('Owens');
+  
+INSERT INTO burgers (name) VALUES ('Cheese Burger');
+INSERT INTO burgers (name) VALUES ('Bacon Burger');
+INSERT INTO burgers (name, Devour) VALUES ('Portabello Burger', true);
+INSERT INTO burgers (name, Devour) VALUES ('Veggie Burger', true);
+INSERT INTO burgers (name, Devour) VALUES ('Black Bean Burger', true);
+INSERT INTO burgers (name) VALUES ('Double Cheese and Bacon Burger');
