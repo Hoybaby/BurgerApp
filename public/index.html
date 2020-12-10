@@ -3,20 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-    <title>MVC With Cats!</title>
+    <title>Burger Time!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/assets/js/index.js"></script>
   </head>
-  <body class="center">
-    <h1>Burgers, Burgers and More Burgers!!</h1>
+  <body class=" container center background">
+    <div class="row">
+      <h1>Burgers, Burgers and More Burgers!!</h1>
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/7d/e5/55/7de555e8-3b5f-442c-4143-99042de24e94/source/256x256bb.jpg" alt="picture of hamburger">
+    </div>
+    
 
-    <h2>Burgers that Have been ordered!</h2>
+    <h3>Burgers that Have been ordered!</h3>
+    
+    <ul style="list-style-position: inside" id="burgersOrdered"></ul>
 
-    <ul id="burgersOrdered"></ul>
-
-    <h2>Burgers that have been Eaten!!</h2>
-
-    <ul id="burgersDevoured"></ul>
+  
+    <h3>Burgers that have been Eaten!!</h3>
+  
+    <ul style="list-style-position: inside" id="burgersDevoured"></ul>
 
     <h2>Add a Burger</h2>
     <form class="create-form">
@@ -26,9 +33,9 @@
       </div>
 
       <div class="form-group">
-        <label for="sleepy">Sleepy?</label><br />
-        <input type="radio" name="devoured" value="1" checked /> Sleepy!<br />
-        <input type="radio" name="devoured" value="0" /> Awake
+        <!-- <label for="sleepy">Sleepy?</label><br /> -->
+        <input type="radio" name="devoured" value="1" checked /> To order<br />
+        <input type="radio" name="devoured" value="0" /> Has been eaten before
       </div>
 
       <button type="submit">Add Burger</button>

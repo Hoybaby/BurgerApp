@@ -13,17 +13,17 @@ $(function() {
       var new_elem =
         "<li>" +
         burgers[i].id + 
-        ". "+burgers[i].name +
-        "<button class='change-devour' data-id='" +
+        ". "+burgers[i].name +    
+          "      <button class='change-devour' data-id='" +
         burgers[i].id +
         "' data-newdevour='" +
         !burgers[i].devoured +
         "'>";
 
       if (burgers[i].devoured) {
-        new_elem += "Make a New Burger!!";
+        new_elem += "Devour this burger!!!";
       } else {
-        new_elem += "HAS Been EATEN!!";
+        new_elem += "Have not Devoured yet!!";
       }
 
       new_elem += "</button>";
