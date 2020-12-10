@@ -23,7 +23,7 @@ $(function() {
       if (burgers[i].devoured) {
         new_elem += "Devour this burger!!!";
       } else {
-        new_elem += "Have not Devoured yet!!";
+        new_elem += "Have not Devoured yet.";
       }
 
       new_elem += "</button>";
