@@ -56,7 +56,7 @@ $(function() {
       dataType:'json',
       contentType: 'application/json'
     }).then(function() {
-      console.log("changed eaten to", newDevoured);
+      console.log("changed eaten to", newDevour);
       // Reload the page to get the updated list
       location.reload();
     });
